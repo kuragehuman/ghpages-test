@@ -1,4 +1,30 @@
-h1{
-    font-size: 20px;
-    color: blue;
+/*
+header {
+    background: #EEE;
+    display: flex;
+    justify-content: space-between;
+}
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+*/
+body{
+}
+.title{
+    background: #EEE;
+
+}
+.content {
+    display: flex;
+}
+.sidebar{
+    background: #EEE;
+    width: 150px;
+}
+.main{
+    margin-top:0px;
+    margin-left: 10px;
 }
