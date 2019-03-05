@@ -11,6 +11,10 @@ ul {
     justify-content: space-around;
 }
 */
+ul {
+    list-style: none;
+}
+
 body{
 }
 .title{
