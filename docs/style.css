@@ -18,31 +18,31 @@ ul {
 body{
     justify-content: center;
 }
-.title{
+div#title{
     background: #EEE;
     list-style: none;
 }
 .content {
     display: flex;
 }
-.sidebar{
+div#leftbar{
     background: #EEE;
     margin-right: auto;
     width: 150px;
 }
-.space{
+div#space{
     width: 10px;
 }
-.main{
+div#main{
     flex: 1;
     justify-content: center;
     background: #EEE;
 }
-.canvas{
+div#canvas{
     width: 480;
     margin: auto;
 }
-.twitter{
+div#rightbar{
     background-color: #EEE;
     margin-left: auto;
 }

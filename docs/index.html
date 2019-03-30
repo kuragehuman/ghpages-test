@@ -4,45 +4,36 @@
         <link rel="stylesheet" href="style.css">
         <meta charset="UTF-8">
         <title>GitHub Pagesのテストだよ</title>
+
+        <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script>
+        $(function() {
+        $("#title").load("title.html");
+        $("#leftbar").load("leftbar.html");
+        $("#rightbar").load("rightbar.html");
+        });
+        </script>
     </head>
-<!--
-    <header>
-        なんか
-        <ul>
-            <li><a href="">menu1</a></li>
-            <li><a href="">menu2</a></li>
-            <li><a href="">menu3</a></li>
-        </ul>
-    </header>   
--->
+
     <body>
         <main>
-            <div class="title">
-                <li><a href="index.html"><h1>タイトルです。</h1></a></li>
-                <p>簡単な説明</p>
+            <div id="title">
+                タイトル
             </div>
             <div class="content">
-                <div class="sidebar" >
-                        Three.js
-                        <ul>
-                            <li><a href="gltest01.html">テスト1</a></li>
-                        </ul>
-                    使ってるやつ
-                    <ul>
-                        <li><a href="https://twitter.com/kuragehuman" target="_blank">Twitter</a></li>
-                        <li><a href="https://github.com/kuragehuman" target="_blank">Github</a></li>
-                        <li><a href="https://kuragehuman.hatenablog.com/" target="_blank">はてなブログ</a></li>
-                    </ul>
+                <div id="leftbar" >
+                    左のバー
                 </div>
-                <div class="space"></div>
-                <div class="main">
+                <div id="space"></div>
+                <div id="main">
                     <p>flexboxというものを使ってレイアウトを変えてみました。</p>
                     <p>ツイッターを貼ってみています。</p>
-                    <p>サイドバーを別で管理できるようにしたい</p>
+                    <p>サイドバーを別で管理できるようになりました。</p>
+                    <p>なんかできないと思ってたらChromeとload()の問題だったらしいです。</p>
                 </div>
-                <div class="space"></div>
-                <div class="twitter">
-                        <a class="twitter-timeline" data-height="1000" data-width="300" data-chrome="transparent" href="https://twitter.com/kuragehuman?ref_src=twsrc%5Etfw">Tweets by kuragehuman</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <div id="space"></div>
+                <div id="rightbar">
+                    右のバー
                 </div>
             </div>
         </main>

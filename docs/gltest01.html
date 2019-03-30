@@ -5,9 +5,18 @@
     <head>
         <link rel="stylesheet" href="style.css">
         <meta charset="UTF-8">
-        <title>GitHub Pagesのテストだよ</title>
+        <title>GitHub Pagesのテストだよ Three.js</title>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/101/three.min.js"></script>
+
+        <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script>
+        $(function() {
+        $("#title").load("title.html");
+        $("#leftbar").load("leftbar.html");
+        $("#rightbar").load("rightbar.html");
+        });
+        </script>
         <script>
             window.addEventListener('load', init);
 
@@ -16,7 +25,7 @@
                 const height = 360;
 
                 const renderer = new THREE.WebGLRenderer({
-                    canvas: document.querySelector('#canvas'), 
+                    canvas: document.querySelector('canvas#canvas'), 
                     antialias: true
                 });
                 renderer.setPixelRatio(window.devicePixelRatio);
@@ -73,39 +82,29 @@
             }
         </script>
     </head>
+
+
     <body>
         <main>
-                <div class="title">
-                    <li><a href="index.html"><h1>タイトルです。</h1></a></li>
-                    <p>簡単な説明</p>
+            <div id="title">
+                タイトル
+            </div>
+            <div class="content">
+                <div id="leftbar" >
+                    左のバー
                 </div>
-                <div class="content">
-                    <div class="sidebar" >
-                        Three.js
-                        <ul>
-                            <li><a href="">テスト1</a></li>
-                        </ul>
-                        使ってるやつ
-                        <ul>
-                            <li><a href="https://twitter.com/kuragehuman" target="_blank">Twitter</a></li>
-                            <li><a href="https://github.com/kuragehuman" target="_blank">Github</a></li>
-                            <li><a href="https://kuragehuman.hatenablog.com/" target="_blank">はてなブログ</a></li>
-                        </ul>
-                    </div>
-                    <div class="space"></div>
-                    <div class="main">
-                        <p>Three.jsテスト1</p>
-                        <div class="canvas">
-                            <canvas id="canvas"></canvas>
-                        </div>
-                    </div>
-                    <div class="space"></div>
-                    <div class="twitter">
-                            <a class="twitter-timeline" data-height="1000" data-width="300" data-chrome="transparent" href="https://twitter.com/kuragehuman?ref_src=twsrc%5Etfw">Tweets by kuragehuman</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <div id="space"></div>
+                <div id="main">
+                    <p>Three.jsテスト1</p>
+                    <div id="canvas">
+                        <canvas id="canvas"></canvas>
                     </div>
                 </div>
-            </main>
-
-        
+                <div id="space"></div>
+                <div id="rightbar">
+                    右のバー
+                </div>
+            </div>
+        </main>        
     </body>
 </html>
