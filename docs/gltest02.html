@@ -1,0 +1,58 @@
+
+<html?\>
+        <head>
+            <link rel="stylesheet" href="style.css">
+            <meta charset="UTF-8">
+            <title>WebGL 02</title>
+
+            <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+            <script>
+            $(function() {
+            $("#title").load("title.html");
+            $("#leftbar").load("leftbar.html");
+            $("#rightbar").load("rightbar.html");
+            });
+            </script>
+            <script src="gl02.js" type="text/javascript"></script>
+            <script src="minMatrix.js" type="text/javascript"></script>
+            <script id="vs" type="x-shader/x-vertex">
+                attribute vec3 position;
+                uniform mat4 mvpMatrix;
+
+                void main(void){
+                    gl_Position = mvpMatrix * vec4(position, 1.0);
+                }
+            </script>
+
+            <script id="fs" type="x-shader/x-fragment">
+                void main(void){
+                    gl_FlagColor = vec4(1.0, 1.0, 1.0, 1.0);
+                }
+            </script>
+        </head>
+    
+        <body>
+            <main>
+                <div id="title">
+                    タイトル
+                </div>
+                <div class="content">
+                    <div id="leftbar" >
+                        左のバー
+                    </div>
+                    <div id="space"></div>
+                    <div id="main">
+                        <p>WebGLの練習です。</p>
+                        <p><a href="https://wgld.org/d/webgl/">全体的にここを参考にしながら進めています。</a></p>
+                        <div id="GLcanvas">
+                            <canvas id="canvas"></canvas>
+                        </div>
+                    </div>
+                    <div id="space"></div>
+                    <div id="rightbar">
+                        右のバー
+                    </div>
+                </div>
+            </main>        
+        </body>
+    </html>

@@ -38,7 +38,7 @@ div#main{
     justify-content: center;
     background: #EEE;
 }
-div#canvas{
+div#GLcanvas{
     width: 480;
     margin: auto;
 }
